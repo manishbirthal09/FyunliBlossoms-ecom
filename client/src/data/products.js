@@ -1,40 +1,4 @@
-/**
- * products.js
- * --------------------------------------------------------------
- * Central data source for categories + products. Images are referenced
- * as absolute paths served straight from Vite's /public folder — no
- * import statements needed, and no bundler processing of the images.
- *
- * FOLDER STRUCTURE TO MATCH THESE PATHS:
- *
- *   public/
- *     images/
- *       categories/
- *         dhaniakhali.jpg
- *         begumpuri.jpg
- *         bhujodi.jpg
- *         baawan-buti.jpg
- *       weaves/                 (close-up story-section detail shots)
- *         dhaniakhali-detail.jpg
- *         begumpuri-detail.jpg
- *         bhujodi-detail.jpg
- *         baawan-buti-detail.jpg
- *       products/
- *         dhaniakhali-rose-check.jpg
- *         begumpuri-cotton.jpg
- *         bhujodi-indigo.jpg
- *         baawan-buti-silk-cotton.jpg
- *         dhaniakhali-marigold.jpg
- *         begumpuri-deep-red.jpg
- *       hero.jpg
- *       founder.jpg
- *
- * Anything placed in /public is served at the site root, so
- * public/images/hero.jpg becomes "/images/hero.jpg" below — you do NOT
- * write "/public/..." in the path. Swap in the client's real filenames
- * as they're delivered; you only need to update this file, not the
- * page components.
- * -------------------------------------------------------------- */
+
 
 export const categories = [
   {
@@ -90,7 +54,7 @@ export const products = [
   },
   {
     id: "begumpuri-cotton",
-    name: "Begumpuri Handwoven Cotton Saree",
+    name: "Begumpuri Handwoven Saree",
     category: "begumpuri",
     price: 2850,
     tag: null,
@@ -130,12 +94,12 @@ export const products = [
   },
 ];
 
-/** Formats a number as INR, e.g. 3200 -> "₹3,200" */
+
 export function formatPrice(amount) {
   return `₹${amount.toLocaleString("en-IN")}`;
 }
 
-/** Convenience getters, handy on category/product detail pages later */
+
 export function getCategoryBySlug(slug) {
   return categories.find((c) => c.slug === slug);
 }

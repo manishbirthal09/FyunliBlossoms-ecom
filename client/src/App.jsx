@@ -37,7 +37,7 @@ function CategoryTile({ name, origin, image, href = "#", tall = false }) {
           alt={`${name} saree`}
           className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        <span className="absolute bottom-3 left-3 rounded-sm bg-[#E35336] px-3 py-1.5 font-['Fraunces'] text-sm text-[#FAF3EC] shadow-sm">
+        <span className="absolute bottom-3 left-3 w-fit max-w-[85%] rounded-sm bg-[#E35336] px-3 py-1.5 font-['Fraunces'] text-sm leading-snug text-[#FAF3EC] shadow-sm">
           {name}
         </span>
       </div>
